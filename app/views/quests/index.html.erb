@@ -1,5 +1,13 @@
 <% content_for :title, "Quests" %>
 <div class="w-full">
+  <%= image_tag "parnfa.jpg",
+        class: "w-100 h-100 object-cover" %>
+  <div class="flex justify-center mb-6">
+    <%= link_to "My brag document",
+          brag_path,
+          class: "bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-full font-medium shadow text-lg",
+          data: { testid: "brag-button" } %>
+  </div>
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Quests</h1>
     <%= turbo_frame_tag "new_quest" do %>
